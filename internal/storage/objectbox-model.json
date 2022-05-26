@@ -1,0 +1,223 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1009144760383425933",
+      "lastPropertyId": "8:9108779320025497871",
+      "name": "Track",
+      "properties": [
+        {
+          "id": "1:8328082909706324046",
+          "name": "Id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1987961737853460063",
+          "name": "Uuid",
+          "indexId": "1:4092924393197870388",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "3:2074561992841698810",
+          "name": "Path",
+          "indexId": "2:8718592668905612706",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "4:4607640011094518809",
+          "name": "ArtistName",
+          "indexId": "3:4058904924878660498",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "5:662266339228307963",
+          "name": "SongName",
+          "indexId": "4:24294085824141789",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "6:1221981067660187423",
+          "name": "AlbumName",
+          "indexId": "5:1169029257320798961",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "7:756298788315811931",
+          "name": "AlbumTrackNumber",
+          "type": 6
+        },
+        {
+          "id": "8:9108779320025497871",
+          "name": "TrackLength",
+          "type": 6
+        }
+      ]
+    },
+    {
+      "id": "2:1182139793609600194",
+      "lastPropertyId": "7:8516664682714891262",
+      "name": "Playlist",
+      "properties": [
+        {
+          "id": "1:1796519454618579982",
+          "name": "Id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7106733261962919725",
+          "name": "Uuid",
+          "indexId": "6:4305032471893927022",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "3:7337893131552777598",
+          "name": "Name",
+          "type": 9
+        },
+        {
+          "id": "4:1853631187711454827",
+          "name": "CurrentTrackId",
+          "type": 3,
+          "flags": 8192
+        },
+        {
+          "id": "5:1873524423846790449",
+          "name": "Elapsed",
+          "type": 6
+        },
+        {
+          "id": "6:6224481199462941621",
+          "name": "ClientIdLock",
+          "type": 9
+        },
+        {
+          "id": "7:8516664682714891262",
+          "name": "ClientLockExpires",
+          "type": 6
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:3267482171217122691",
+          "name": "Tracks",
+          "targetId": "1:1009144760383425933"
+        }
+      ]
+    },
+    {
+      "id": "3:6526345522080463439",
+      "lastPropertyId": "2:6453426738975360861",
+      "name": "Friend",
+      "properties": [
+        {
+          "id": "1:883542943098408523",
+          "name": "Id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6453426738975360861",
+          "name": "friendId",
+          "indexId": "7:8254895745365351782",
+          "type": 9,
+          "flags": 4096
+        }
+      ]
+    },
+    {
+      "id": "4:4728390412674560454",
+      "lastPropertyId": "9:386897330895652911",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:4588827918934279293",
+          "name": "Id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5843302712282538112",
+          "name": "Uuid",
+          "indexId": "8:4804161878894786730",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "3:7789964683614264008",
+          "name": "FirstName",
+          "type": 9
+        },
+        {
+          "id": "4:6952393024719262183",
+          "name": "LastName",
+          "type": 9
+        },
+        {
+          "id": "5:7450737382308600686",
+          "name": "EmailAddress",
+          "indexId": "9:2872564972079443293",
+          "type": 9,
+          "flags": 4096
+        },
+        {
+          "id": "6:729577253119581218",
+          "name": "Password",
+          "type": 9
+        },
+        {
+          "id": "7:1652173814307647868",
+          "name": "Enabled",
+          "type": 1
+        },
+        {
+          "id": "8:6739946297492405455",
+          "name": "AdminUser",
+          "type": 1
+        },
+        {
+          "id": "9:386897330895652911",
+          "name": "LastPlaylist",
+          "type": 6,
+          "flags": 8192
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:8897016110600791681",
+          "name": "Tracks",
+          "targetId": "1:1009144760383425933"
+        },
+        {
+          "id": "3:5520690084346431236",
+          "name": "Playlists",
+          "targetId": "2:1182139793609600194"
+        },
+        {
+          "id": "4:4712361723987089641",
+          "name": "Friends",
+          "targetId": "3:6526345522080463439"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "4:4728390412674560454",
+  "lastIndexId": "9:2872564972079443293",
+  "lastRelationId": "4:4712361723987089641",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
